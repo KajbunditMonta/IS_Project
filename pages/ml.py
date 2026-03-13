@@ -41,7 +41,7 @@ with col1 :
         unsafe_allow_html=True
     )
     st.info("Use dataset from Kaggle, Dataset name **Motorcycle Dataset** by Nehal Birla and 1 collaborator Updated 6 years ago")
-    st.image("asset/motocycle_dataset.jpg.")
+    st.image("asset/motocycle_dataset.jpg")
     st.link_button("Visit dataset ➡️", "https://www.kaggle.com/datasets/nehalbirla/motorcycle-dataset")
 
 with col2 :
