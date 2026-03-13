@@ -1,4 +1,9 @@
 import streamlit as st
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
+import joblib
+import pandas as pd
 
 if st.button("⬅️ Back") :
     st.switch_page("main.py")
@@ -155,9 +160,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-import joblib
-import pandas as pd
 
 @st.cache_resource
 def load_model () :
