@@ -16,10 +16,10 @@ st.markdown(
 
 st.markdown(
     """
-    <div style="text-align: center; color: #555; margin-bottom: 20px; font-size : 15px">
-        This model can predict second hand motorcycle price, I use Voting Regressor (Ensemble Learning) which 
-        combines multiple algorithms to provide the most stable price estimation (LinearRegression,
-         RandomForestRegressor and XGBRegressor) with 78% in R2 score.
+    <div style="text-align: center; color: #555; margin-bottom: 20px; font-size : 17px">
+        This model can predict <b>second hand motorcycle price</b>, I use Voting Regressor <b>(Ensemble Learning)</b> which 
+        combines multiple algorithms to provide the most stable price estimation <b>(LinearRegression,
+         RandomForestRegressor and XGBRegressor)</b> with <b>78%</b> in R2 score.
     </div>
     """,
     unsafe_allow_html=True
@@ -65,7 +65,7 @@ with col2 :
 
             **seller type** : Tells if a Seller is Individual or a Dealer.
 
-            **owner** : Number of previous owners of the vehicle..
+            **owner** : Number of previous owners of the vehicle.
 
             **km_driven** : Number of kilometre motorcycle has traveled.
 
@@ -132,6 +132,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.code("df = pd.get_dummies(df, columns=['seller_type'], drop_first=True)")
+
+st.markdown(
+    """
+    <div style="text-align: left; color: #555; margin-bottom: 20px; font-size : 15px">
+        <b>Drop name</b> column because to many to classified.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.code("df_final = df.drop('name', axis=1)")
 
 st.divider()
 
